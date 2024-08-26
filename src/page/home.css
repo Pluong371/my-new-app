@@ -1,0 +1,21 @@
+.home
+{
+    display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 253, 249);
+}
+.content{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.avatar{
+   margin-right: 10px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+

@@ -19,7 +19,7 @@ const PostForm = () => {
   return (
     <div className="form_container">
       
-      <div className="avatar">
+      <div className="avatar_1">
         <FontAwesomeIcon icon={faUserAstronaut} size="2x" />
       </div>
       <form onSubmit={handleSubmit} className="post-form">

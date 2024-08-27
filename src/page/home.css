@@ -1,21 +1,41 @@
-.home
-{
-    display: flex;
+.home {
+  display: flex;
   flex-direction: column;
   background-color: rgb(255, 253, 249);
 }
-.content{
+
+.header {
+  height: 60px; /* Adjust this value based on the actual height of your header */
+  background-color: #f8f9fa; /* Example background color */
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure header is above other elements */
+}
+
+.content {
   display: flex;
   justify-content: space-between;
   padding: 20px;
+  margin-top: 70px; /* Adjust this value based on the actual height of your header */
+
 }
 
-.avatar{
-   margin-right: 10px;
+.avatar {
+  margin-right: 10px;
 }
 
 .main-content {
   flex: 1;
   padding: 20px;
+  margin-left: 250px;
 }
-
+.fixed-sidebar {
+  position: fixed;
+  top: 90px; /* Adjusted value to move it down by 10px */
+  left: 0;
+  height: calc(100% - 70px); /* Adjusted value to account for the new top value */
+  overflow-y: auto;
+  margin-left: 15px;
+}

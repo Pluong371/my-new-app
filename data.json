@@ -1,0 +1,70 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "role": "Developer",
+      "time": "2 hours ago",
+      "content": "This is a sample post content.",
+      "likes": 25,
+      "comments": 14,
+      "shares": 3,
+      "commentsList": [
+        {
+          "id": 1,
+          "name": "Jane Smith",
+          "comment": "Great post!"
+        },
+        {
+          "id": 2,
+          "name": "Bob Johnson",
+          "comment": "Thanks for sharing."
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Alice Brown",
+      "role": "Designer",
+      "time": "1 hour ago",
+      "content": "Another sample post content.",
+      "likes": 38,
+      "comments": 10,
+      "shares": 5,
+      "commentsList": [
+        {
+          "id": 1,
+          "name": "Charlie Davis",
+          "comment": "Interesting read."
+        },
+        {
+          "id": 2,
+          "name": "Dana Lee",
+          "comment": "I learned a lot."
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "đâsdasd",
+      "role": "Designer",
+      "time": "1 hour ago",
+      "content": "Another sample post content.",
+      "likes": 38,
+      "comments": 10,
+      "shares": 5,
+      "commentsList": [
+        {
+          "id": 1,
+          "name": "Charlie Davis",
+          "comment": "Interesting read."
+        },
+        {
+          "id": 2,
+          "name": "Dana Lee",
+          "comment": "I learned a lot."
+        }
+      ]
+    }
+  ]
+}

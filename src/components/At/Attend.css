@@ -1,0 +1,32 @@
+.attend-header {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Khoảng cách giữa icon và chữ */
+
+}
+.attend-header span {
+  font-size: 22px;
+  font-weight: bold;
+}
+.Attend{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 15px;
+  
+}
+.Attend button{
+  width: 90%;
+  height: 50px;
+  background-color: #1D9BF0;
+  border-radius: 40px;
+  margin-bottom: 20px;
+  border: none;
+  color: white;
+  font-size: large;
+}
+.Attend_container{
+  border-radius: 5px;
+  margin-top: 15px;
+  background-color: #f1f1f5;
+}

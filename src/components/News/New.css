@@ -1,0 +1,96 @@
+/* Container for the entire post */
+.post {
+  background-color: #f1f1f5;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  width: 670px;
+  margin-left: 18px;
+}
+
+/* Profile section */
+.profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+/* Avatar section */
+.avatar {
+  margin-right: 12px;
+}
+
+.avatar img {
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+}
+
+/* Profile info section */
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-info .name {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.profile-info .role,
+.profile-info .time {
+  font-size: 14px;
+  color: #888;
+}
+
+/* Post content section */
+.post-content {
+  margin-bottom: 12px;
+}
+
+.post-content img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+/* Actions section */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.actions button {
+  background: none;
+  border: none;
+  color: #0073b1;
+  cursor: pointer;
+  padding: 8px;
+}
+
+
+/* Comments section */
+.comments {
+  border-top: 1px solid #ddd;
+  padding-top: 12px;
+  text-align: left;
+  margin-left: 25px;
+}
+
+.comment {
+  margin-bottom: 8px;
+}
+
+.comment .comment-name {
+  font-weight: bold;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.comment .comment-text {
+  margin-left: 16px;
+  font-size: 14px;
+  margin-top: 5px;
+}

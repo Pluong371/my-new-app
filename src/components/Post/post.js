@@ -2,23 +2,46 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserAstronaut } from '@fortawesome/free-solid-svg-icons';
 import './post.css';
-const PostForm = () => {
+
+const PostForm = ({ onPostSubmit }) => {
   const [inputValue, setInputValue] = useState("");
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // Xử lý logic đăng bài ở đây
-    console.log("Đăng bài:", inputValue);
-    setInputValue(""); // Xóa nội dung sau khi đăng
+    const newPost = {
+      content: inputValue,
+      name: "test",
+      timestamp: new Date().toLocaleString()
+    };
+
+    try {
+      const response = await fetch('http://localhost:3001/posts', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newPost)
+      });
+
+      if (response.ok) {
+        console.log("Đăng bài thành công:", newPost);
+        onPostSubmit(newPost); // Call the callback function
+      } else {
+        console.error("Lỗi khi đăng bài:", response.statusText);
+      }
+    } catch (error) {
+      console.error("Lỗi khi đăng bài:", error);
+    }
+
+    setInputValue(""); // Clear the input after posting
   };
 
   return (
     <div className="form_container">
-      
       <div className="avatar_1">
         <FontAwesomeIcon icon={faUserAstronaut} size="2x" />
       </div>
@@ -35,7 +58,6 @@ const PostForm = () => {
             Đăng lên
           </button>
         </div>
-        <div></div>
       </form>
     </div>
   );

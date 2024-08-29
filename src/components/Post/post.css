@@ -1,15 +1,13 @@
 .form_container {
   display: flex;
   align-items: center;
-  background-color: #f1f1f5;
+  background-color: #FFFf;
   height: 125px;
   border: 1px;
   border-radius: 8px;
-  width: 700px;
-  position: relative; /* Thêm thuộc tính này để định vị nút submit */
-  margin-left: 20px; 
-  transform: translateY(-20px);
- 
+  width: 100%;
+  position: relative;  
+  margin-bottom: 20px;
   
 }
 
@@ -19,20 +17,18 @@
   flex-grow: 1;
   position: relative; 
   transform: translateY(-15px);
-  margin-left: 15px;/* Thêm thuộc tính này để định vị nút submit 
-  
-  */
+  margin-left: 15px; 
   
 }
 
 .post-input {
-  width: 550px;
+  width: 84.4%;
   height: 30px;
   padding: 10px 50px 10px 10px; /* Thêm khoảng trống cho nút bên trong */
   border: 1px solid #ccc;
   border-radius: 25px;
   border: none;
-   background-color: #f1f1f5;
+   background-color: #ffff;
 }
 
 .post-button {
@@ -41,7 +37,7 @@
   top: 50%;
   transform: translateY(-50%);
   height: 34px;
-  width: 98px;
+  width: 17.6%;
   padding: 5px 10px;
   background-color: #007bff;
   color: white;
@@ -67,9 +63,9 @@
   display: block;
   width: 100%;
   height: 0.2px; /* Chiều cao của đường kẻ */
-  background-color: #000; /* Màu của đường kẻ */
+  background-color: #EFEFEF; /* Màu của đường kẻ */
   position: absolute;
   bottom: -10px; /* Khoảng cách 35px dưới post-form */
   left: 10px;
-  width: 550px;
+  width: 443px;
 }

@@ -1,57 +1,53 @@
-import React from 'react';
-import '../header/header.css'; // Import file CSS để style cho header
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import thư viện FontAwesomeIcon
-import {
-  faEllipsis,
-  faBrain,
-  faBell,
-  faUserAstronaut,
-  faTaxi,
-  faMagnifyingGlass,
-} from "@fortawesome/free-solid-svg-icons";
-
-
+import React from "react";
+// import '../header/header.css';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import thư viện FontAwesomeIcon
+import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
+import vectorImage from "../../pic/Vector.png";
+import brain from "../../pic/Group 427320770.png";
+import bell from "../../pic/Group 9089.png";
+import mail from "../../pic/Group 9306.png";
+import avatar from "../../pic/Avatars.png";
+import search from "../../pic/Search.png";
+import "./header.css";
 const Header = () => {
   return (
-    <header className="header">
+    <div className="header">
       <div className="logo">
-        <img
-          src="https://antimatter.vn/wp-content/uploads/2022/04/hinh-meo-khoc-tha-like.jpg"
-          alt="Logo"
-        />
+        <img src={vectorImage} alt="Logo" />
         <h1>Tomaru</h1>
       </div>
       <div className="search">
-        <FontAwesomeIcon icon={faMagnifyingGlass} className="icon_search" />
-        <input type="text" placeholder="Tìm kiếm trên Tomiru" />
+        <img src={search} alt="" className="icon_search" />
+        <div className="placeholder">Tìm kiếm trên Tomiru</div>
+        <input type="text" />
       </div>
       <div className="buttons">
-        <div className="button-item">
-          <FontAwesomeIcon icon={faBrain} size="lg" />
+        <div className="button-item-KH">
+          <img src={brain}  />
           <p>CSKH</p>
         </div>
-        <div className="button-item">
-          <FontAwesomeIcon icon={faTaxi} size="lg" />
+        <div className="button-item-mail">
+          <img src={mail}  />
           <p>Hòm Thư</p>
         </div>
-        <div className="button-item">
-          <FontAwesomeIcon icon={faBell} size="lg" />
+        <div className="button-item-bell">
+          <img src={bell}  />
           <p>Thông Báo</p>
         </div>
       </div>
-      <div className="profile">
+      <div className="profile_header">
         <div className="avatar">
-          <FontAwesomeIcon icon={faUserAstronaut} size="2x" />
+          <img src={avatar}  />
         </div>
-        <div className="nameUser">
-          <div>Nguyễn Văn A</div>
-          <div>Admin</div>
+        <div className="infor">
+          <div className="nameUser">Nguyễn Văn A</div>
+          <div className="role">@NguyenVanA</div>
         </div>
       </div>
-      <div>
-        <FontAwesomeIcon icon={faEllipsis} size="lg"/>
+      <div className="menu_header">
+        <FontAwesomeIcon icon={faEllipsis} size="lg" />
       </div>
-    </header>
+    </div>
   );
 };
 

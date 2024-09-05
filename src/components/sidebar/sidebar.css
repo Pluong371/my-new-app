@@ -48,4 +48,11 @@ Size:16px;
 background-color: #1D9BF0;
 color: white;
 border: none;
+
+}
+.ButtonSidebar_Container {
+  display: flex;
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc nếu cần */
+  height: 100%; /* Đảm bảo container chiếm toàn bộ chiều cao nếu cần */
 }

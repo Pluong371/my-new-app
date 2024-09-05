@@ -1,0 +1,70 @@
+.His_Ac_Container {
+  background-color: white;
+  border-radius: 3px;
+  /* overflow: hidden;  */
+  word-wrap: break-word;
+  width: 101%;
+}
+.His_Ac_Container h3{
+  padding:12px;
+  margin-bottom: 5px;
+  font-size: 17px;
+}
+/* .His_Ac_Container ul {
+  padding: 0;
+  margin: 0; 
+}
+.His_Ac_Container li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+} */
+.His_Ac_Container ul{
+  padding-left: 0;
+  margin-top: -15px;
+}
+.His_Acti {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 13px;
+  /* padding: 2px; */
+  padding-left: 10px;
+  gap: 8px;
+}
+
+.container_His_Ac {
+  display: flex;
+  align-content: center;
+  width: 100%; 
+}
+.His_Ac_Container .his_name{
+  font-size: 14px;
+  font-weight: bold;
+}
+.icon_his img {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+  padding-bottom: 18px;
+}
+
+.name {
+  flex-shrink: 0;
+  margin-right: 4px;
+  font-weight: bold;
+}
+
+.content_his {
+  flex-grow: 1;
+
+}
+
+
+.Time_His {
+  color: #9e9e9e;
+  margin-left: auto; 
+  font-size: 10px;
+  padding-bottom: 10px;
+  
+}

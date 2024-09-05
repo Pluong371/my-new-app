@@ -2,7 +2,7 @@ import React from "react";
 // import '../header/header.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import thư viện FontAwesomeIcon
 import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
-import vectorImage from "../../pic/Vector.png";
+import logo from "../../pic/Logo.png";
 import brain from "../../pic/Group 427320770.png";
 import bell from "../../pic/Group 9089.png";
 import mail from "../../pic/Group 9306.png";
@@ -13,8 +13,7 @@ const Header = () => {
   return (
     <div className="header">
       <div className="logo">
-        <img src={vectorImage} alt="Logo" />
-        <h1>Tomaru</h1>
+        <img src={logo} alt="Logo" />
       </div>
       <div className="search">
         <img src={search} alt="" className="icon_search" />

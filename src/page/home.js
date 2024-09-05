@@ -7,7 +7,7 @@ import Price from "../components/Price/Price";
 import New from "../components/News/New";
 import Attend from "../components/At/Attend";
 import New_Feed from "../components/Post_Form/New_Feed";
-import His_Ac from "../components/History_Action/His_Ac.";
+import His_Ac from "../components/History_Action/His_Ac";
 
 const Home = () => {
   return (
@@ -22,7 +22,9 @@ const Home = () => {
         </main>
         <div className="sidebarRi">
           <Price />
+
           <Attend />
+          <His_Ac />
         </div>
       </div>
     </div>

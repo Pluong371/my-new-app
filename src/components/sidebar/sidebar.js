@@ -1,5 +1,5 @@
 import React from "react";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
 import "./sidebar.css";
 import house from "../../pic/House_02.png";
@@ -12,7 +12,6 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <ul className="menu">
-        
         <SidebarButton content={"Trang chủ"} icon={house} path={"/home"} />
         <SidebarButton content={"Khám Phá"} icon={dic} path={"/test"} />
         <SidebarButton content={"Nhóm của tôi"} icon={house} path={"/test"} />
@@ -25,7 +24,9 @@ const Sidebar = () => {
         <SidebarButton content={"Tài liệu SP"} icon={dic} path={"/test"} />
         <SidebarButton content={"Link mời khách"} icon={dic} path={"/test"} />
       </ul>
-      <button className="ButtonSidebar">Đăng bài </button>
+      <div class="ButtonSidebar_Container">
+        <button class="ButtonSidebar">Đăng bài</button>
+      </div>
     </div>
   );
 };

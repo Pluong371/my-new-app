@@ -8,7 +8,7 @@ const Attend = () => {
     <div className="Attend_container">
       <div className="Attend">
         <h1 className="attend-header">
-          <FontAwesomeIcon icon={faCalendarDays} />
+          <FontAwesomeIcon icon={faCalendarDays} size="md"/>
           <span>Điểm danh nhận TOMXU</span>
         </h1>
         <button>Nhận Ngay 3 TOMXU</button>

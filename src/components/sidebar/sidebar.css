@@ -12,8 +12,8 @@
 .menu li {
   display: flex;
   align-items: center;
-  margin: 26px 0;
-  gap:22px;
+  margin: 24px 0;
+  gap:19px;
  font-size:17px;
  font-weight: 400;
 }
@@ -23,7 +23,7 @@
 .post-button-sidebar {
   margin-top: 20px;
    margin-bottom: 10px;
-  padding: 10px;
+  padding: 5px;
   background-color: #007bff;
   color: white;
   border: none;

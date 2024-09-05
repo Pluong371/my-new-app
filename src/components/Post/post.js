@@ -5,10 +5,16 @@ import './post.css';
 
 const PostForm = ({ onPostSubmit }) => {
   const [inputValue, setInputValue] = useState("");
+    const [selectedImage, setSelectedImage] = useState(null);
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
+    const handleImageChange = (e) => {
+      if (e.target.files && e.target.files[0]) {
+        setSelectedImage(URL.createObjectURL(e.target.files[0]));
+      }
+    };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -54,10 +60,17 @@ const PostForm = ({ onPostSubmit }) => {
             placeholder="Nhập nội dung bài viết..."
             className="post-input"
           />
+          <input
+            type="file"
+            accept="image/*"
+            onChange={handleImageChange}
+            className="image-input"
+          />
           <button type="submit" className="post-button">
             Đăng lên
           </button>
         </div>
+        <div></div>
       </form>
     </div>
   );

@@ -1,12 +1,20 @@
 /* Container for the entire post */
 .post {
+  padding: 16px;
+  margin-bottom: 12px;
+ border-top: 1px solid #ddd;
+}
+.container_New{
+
   background-color: #FFFFFF;
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 16px;
-  margin-bottom: 12px;
- margin-top: 13px
+  overflow: hidden;
+  text-align: center;
+  align-self: center;
+  /* padding-top: 10px; */
 }
+
 
 /* Profile section */
 .profile {
@@ -93,3 +101,26 @@
   font-size: 14px;
   margin-top: 5px;
 }
+
+.row {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  background-color: #FFFFFF;
+}
+
+.col {
+  flex: 1;
+  text-align: center;
+  padding: 10px; 
+}
+.col-choose {
+  border-bottom: 3px solid #1D9BF0;
+  
+}
+.col:hover {
+  background-color: #f1f1f1;
+}
+
+
+

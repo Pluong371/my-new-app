@@ -72,6 +72,7 @@ const New = () => {
           {Array.isArray(post.commentsList) &&
             post.commentsList.map((comment) => (
               <div className="comment" key={comment.id}>
+                
                 <div className="comment-name">{comment.name}</div>
                 <div className="comment-text">{comment.comment}</div>
               </div>

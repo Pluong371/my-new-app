@@ -5,6 +5,7 @@ import News from "../News/New";
 const New_Feed = () => {
   const [posts, setPosts] = useState([]);
   const [flag, setFlag] = useState(false);
+  const [activeTab, setActiveTab] = useState("");
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -20,6 +21,18 @@ const New_Feed = () => {
     fetchPosts();
   }, [flag]);
 
+  const handleForYou = () => {
+    setActiveTab("1");
+  };
+
+  const handleMyGroup = () => {
+    setActiveTab("2");
+  };
+
+  const handleNews = () => {
+    setActiveTab("3");
+  };
+
   const handlePostSubmit = (newPost) => {
     setPosts((prevPosts) => [newPost, ...prevPosts]);
     setFlag(!flag);
@@ -29,10 +42,32 @@ const New_Feed = () => {
   return (
     <div className="New_Feed">
       <PostForm onPostSubmit={handlePostSubmit} />
-      <div className="filter">
-        aaa
+      <div className="filter">aaa</div>
+      <div className="container_New">
+        <div className="row">
+          <div
+            className={`col ${activeTab == "1" ? "col-choose" : ""}`}
+            onClick={handleForYou}
+          >
+            Dành cho bạn
+          </div>
+          <div
+            className={`col ${activeTab == "2" ? "col-choose" : ""}`}
+            onClick={handleMyGroup}
+          >
+            Nhóm của tôi
+          </div>
+          <div
+            className={`col ${activeTab == "3" ? "col-choose" : ""}`}
+            onClick={handleNews}
+          >
+            Tin tức
+          </div>
+        </div>
+        {activeTab === "1" && <News posts={posts} />}
+        {activeTab === "2" && <div className="blank">a</div>}
+        {activeTab === "3" && <div className="blank">b</div>}
       </div>
-      <News posts={posts} />
     </div>
   );
 };

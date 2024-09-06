@@ -2,19 +2,17 @@
 .post {
   padding: 16px;
   margin-bottom: 12px;
- border-top: 1px solid #ddd;
+  border-top: 1px solid #ddd;
 }
-.container_New{
-
-  background-color: #FFFFFF;
+.container_New {
+  background-color: #ffffff;
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
-  text-align: center;
+
   align-self: center;
   /* padding-top: 10px; */
 }
-
 
 /* Profile section */
 .profile {
@@ -53,11 +51,20 @@
 
 /* Post content section */
 .post-content {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
+ 
 }
+.post-content .content {
+  width: 100%;
+  padding: 0;
+   margin-top: 0px;
+}
+/* .post-content iframe {
+  width: 100%;
+height:fit-content ;
+} */
 
 .post-content img {
-
   border-radius: 8px;
   margin-top: 8px;
 }
@@ -76,7 +83,6 @@
   cursor: pointer;
   padding: 8px;
 }
-
 
 /* Comments section */
 .comments {
@@ -104,23 +110,19 @@
 
 .row {
   display: flex;
-  justify-content: center; 
-  align-items: center; 
-  background-color: #FFFFFF;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
 }
 
 .col {
   flex: 1;
   text-align: center;
-  padding: 10px; 
+  padding: 10px;
 }
 .col-choose {
-  border-bottom: 3px solid #1D9BF0;
-  
+  border-bottom: 3px solid #1d9bf0;
 }
 .col:hover {
   background-color: #f1f1f1;
 }
-
-
-

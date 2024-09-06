@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserAstronaut } from "@fortawesome/free-solid-svg-icons";
-import './New.css';
+import "./New.css";
+import ResponsiveMedia from "../../reponsiveMedia";
 const New = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3001/posts')
-      .then(response => response.json())
-      .then(data => { 
+    fetch("http://localhost:3001/posts")
+      .then((response) => response.json())
+      .then((data) => {
         console.log(data);
         if (Array.isArray(data)) {
           setPosts(data);
@@ -16,10 +17,8 @@ const New = () => {
           console.error("Data or posts are undefined");
         }
       })
-      .catch(error => console.error('Error fetching data:', error));
+      .catch((error) => console.error("Error fetching data:", error));
   }, []);
-
- 
 
   if (posts.length === 0) {
     return <div>Loading...</div>;
@@ -30,25 +29,26 @@ const New = () => {
     const [comments, setComments] = useState(post.comments);
     const [shares, setShares] = useState(post.shares);
 
+
     const handleLike = () => {
       const newLikes = likes + 1;
       setLikes(newLikes);
-      console.log('newLikes', newLikes);
-      updateDataJson(post.id, 'likes', newLikes);
-      
+      console.log("newLikes", newLikes);
+      updateDataJson(post.id, "likes", newLikes);
     };
 
     const handleComment = () => {
       const newComments = comments + 1;
       setComments(newComments);
-      updateDataJson(post.id, 'comments', newComments);
+      updateDataJson(post.id, "comments", newComments);
     };
 
     const handleShare = () => {
       const newShares = shares + 1;
       setShares(newShares);
-      updateDataJson(post.id, 'shares', newShares);
+      updateDataJson(post.id, "shares", newShares);
     };
+   
 
     return (
       <div key={post.id} className="post">
@@ -62,7 +62,17 @@ const New = () => {
             <div className="time">{post.time}</div>
           </div>
         </div>
-        <div className="post-content">{post.content}</div>
+        <div className="post-content">
+          <p className="content">{post.content}</p>
+          <iframe
+            src={post.media_url}
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+          ></iframe>
+          {/* <ResponsiveMedia src={post.media} type={post.media_type} /> */}
+        </div>
+
         <div className="actions">
           <button onClick={handleLike}>👍 Thích ({likes})</button>
           <button onClick={handleComment}>💬 Trả lời ({comments})</button>
@@ -72,7 +82,6 @@ const New = () => {
           {Array.isArray(post.commentsList) &&
             post.commentsList.map((comment) => (
               <div className="comment" key={comment.id}>
-                
                 <div className="comment-name">{comment.name}</div>
                 <div className="comment-text">{comment.comment}</div>
               </div>

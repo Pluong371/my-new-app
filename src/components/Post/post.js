@@ -60,12 +60,12 @@ const PostForm = ({ onPostSubmit }) => {
             placeholder="Nhập nội dung bài viết..."
             className="post-input"
           />
-          <input
+          {/* <input
             type="file"
             accept="image/*"
             onChange={handleImageChange}
             className="image-input"
-          />
+          /> */}
           <button type="submit" className="post-button">
             Đăng lên
           </button>

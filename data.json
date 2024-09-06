@@ -5,7 +5,9 @@
       "name": "John Doe",
       "role": "Developer",
       "time": "2 hours ago",
-      "content": "This is a sample post content.",
+      "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio quibusdam laudantium quisquam, aspernatur minus quas fugit dolorum in vitae voluptas corporis, nihil cum, dolor laborum non temporibus ea consectetur expedita.",
+      "media_type": "image",
+      "media_url": "https://static.lag.vn/upload/news/22/02/28/photo1644669320729-1644669321286_PSGT.jpg?w=800&encoder=wic&subsampling=444",
       "likes": 30,
       "comments": 14,
       "shares": 3,
@@ -28,8 +30,10 @@
       "role": "Designer",
       "time": "1 hour ago",
       "content": "Another sample post content.",
-      "likes": 38,
-      "comments": 10,
+      "media_type": "video",
+      "media_url": "",
+      "likes": 40,
+      "comments": 11,
       "shares": 5,
       "commentsList": [
         {
@@ -50,6 +54,8 @@
       "role": "Designer",
       "time": "1 hour ago",
       "content": "Another sample post content.",
+      "media_type": "image",
+      "media_url": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
       "likes": 45,
       "comments": 10,
       "shares": 5,
@@ -65,36 +71,6 @@
           "comment": "I learned a lot."
         }
       ]
-    },
-    {
-      "id": "b20c",
-      "content": "as",
-      "name": "test",
-      "timestamp": "16:13:37 5/9/2024"
-    },
-    {
-      "id": "8654",
-      "content": "",
-      "name": "test",
-      "timestamp": "16:31:36 5/9/2024"
-    },
-    {
-      "id": "b611",
-      "content": "",
-      "name": "test",
-      "timestamp": "16:31:38 5/9/2024"
-    },
-    {
-      "id": "f9f0",
-      "content": "",
-      "name": "test",
-      "timestamp": "16:31:40 5/9/2024"
-    },
-    {
-      "id": "171a",
-      "content": "a",
-      "name": "test",
-      "timestamp": "16:31:42 5/9/2024"
     }
   ]
 }

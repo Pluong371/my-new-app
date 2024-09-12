@@ -23,7 +23,8 @@ const Price = () => {
         </div>
       </div>
       <div className="price-item">
-        <h3>pTOMXU (chi tiết)</h3>
+        <h3>pTOMXU </h3>
+      
         <div className="quantity-container">
           <span>{isVisiblePTomxu ? quantity : "****"}</span>
           <button
@@ -35,8 +36,8 @@ const Price = () => {
         </div>
       </div>
       <div className="Trans">
-        <button>chuyển</button>
-        <button>nhận</button>
+        <button>Chuyển</button>
+        <button>Nhận</button>
       </div>
       <div className="Bons">
         <button>Lịch sử giao dịch</button>

@@ -56,16 +56,16 @@
   transform: translateY(-15px);
 }
 .post-input:focus {
-  outline: none; /* Loại bỏ viền khi nhấn vào input */
+  outline: none; 
 }
 .post-form::after {
   content: '';
   display: block;
   width: 100%;
-  height: 0.2px; /* Chiều cao của đường kẻ */
-  background-color: #EFEFEF; /* Màu của đường kẻ */
+  height: 0.2px; 
+  background-color: #EFEFEF; 
   position: absolute;
-  bottom: -10px; /* Khoảng cách 35px dưới post-form */
+  bottom: -10px; 
   left: 10px;
   width: 90%;
 }

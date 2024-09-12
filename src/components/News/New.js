@@ -28,6 +28,8 @@ const New = () => {
     const [likes, setLikes] = useState(post.likes);
     const [comments, setComments] = useState(post.comments);
     const [shares, setShares] = useState(post.shares);
+    const ref = useRef();
+
 
 
     const handleLike = () => {
@@ -48,7 +50,6 @@ const New = () => {
       setShares(newShares);
       updateDataJson(post.id, "shares", newShares);
     };
-   
 
     return (
       <div key={post.id} className="post">
@@ -64,12 +65,35 @@ const New = () => {
         </div>
         <div className="post-content">
           <p className="content">{post.content}</p>
-          <iframe
-            src={post.media_url}
-            frameborder="0"
-            allow="autoplay; encrypted-media"
-            allowfullscreen
-          ></iframe>
+          <div className="content_media">
+            {post.media_type === "image" ? (
+              <img
+                ref={ref}
+                src={post.media_url}
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+                style={{
+                  width: "100%",
+                  height: "100%",
+                }}
+              ></img>
+            ):post.media_type === "video" ? (
+              // <video
+              //   ref={ref}
+              //   src={post.media_url}
+              //   allow="autoplay; encrypted-media"
+              //   allowFullScreen
+              //   style={{
+              //     width: "100%",
+              //     height: "100%",
+              //   }}
+                // ></video>
+                <div>a</div>
+            ):
+              (
+              <div></div>
+            )}
+          </div>
           {/* <ResponsiveMedia src={post.media} type={post.media_type} /> */}
         </div>
 

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import PostForm from "../Post/post";
 import News from "../News/New";
+import Filter_Setting_icon from "../../pic/settings-filter.png";
 
 const New_Feed = () => {
   const [posts, setPosts] = useState([]);
   const [flag, setFlag] = useState(false);
-  const [activeTab, setActiveTab] = useState("");
+  const [activeTab, setActiveTab] = useState("1");
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -42,7 +43,12 @@ const New_Feed = () => {
   return (
     <div className="New_Feed">
       <PostForm onPostSubmit={handlePostSubmit} />
-      <div className="filter">aaa</div>
+      <div className="filter">
+        <span>
+          Lọc
+        </span>
+        <img src={Filter_Setting_icon} alt="" />
+      </div>
       <div className="container_New">
         <div className="row">
           <div

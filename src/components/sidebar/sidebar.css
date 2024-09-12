@@ -1,28 +1,21 @@
-
-
 .menu {
   list-style: none;
   padding: 0;
-  padding-left: 15px;
-
- 
+  padding-left: 10%;
 }
-
 
 .menu li {
   display: flex;
   align-items: center;
   margin: 24px 0;
-  gap:19px;
- font-size:17px;
- font-weight: 400;
+  gap: 19px;
+  font-size: 17px;
+  font-weight: 400;
 }
-
-
 
 .post-button-sidebar {
   margin-top: 20px;
-   margin-bottom: 10px;
+  margin-bottom: 10px;
   padding: 5px;
   background-color: #007bff;
   color: white;
@@ -32,27 +25,43 @@
   width: 80%;
   border-radius: 30px;
   border: none;
-  
 }
 
 .post-button-sidebar:hover {
   background-color: #0056b3;
 }
-.ButtonSidebar{
-width:80%;
-height: 50px;
-border-radius: 36px;
-margin-top: 28px;
-font-weight:600;
-Size:16px;
-background-color: #1D9BF0;
-color: white;
-border: none;
 
+.ButtonSidebar {
+  width: 80%;
+  height: 50px;
+  border-radius: 36px;
+  margin-top: 11px;
+  font-weight: 600;
+  font-size: 16px;
+  background-color: #1d9bf0;
+  color: white;
+  border: none;
 }
+
 .ButtonSidebar_Container {
   display: flex;
-  justify-content: center; /* Căn giữa theo chiều ngang */
-  align-items: center; /* Căn giữa theo chiều dọc nếu cần */
-  height: 100%; /* Đảm bảo container chiếm toàn bộ chiều cao nếu cần */
+  padding-bottom: 24px;
+  justify-content: center; 
+  align-items: center; 
+  height: 100%; 
+}
+
+.sidebarButton_li:hover {
+  cursor: pointer;
+}
+
+.sidebarButton_li.active {
+
+  color: #1D9BF0; 
+}
+.ButtonSidebar:hover {
+  background-color: #0056b3; 
+  color: white; 
+  cursor: pointer;
+  
 }

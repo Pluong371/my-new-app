@@ -1,113 +1,143 @@
 .header {
   display: flex;
-
   align-items: center;
- 
   width: 67%;
   height: 91px;
 }
-.logo{
+
+.logo {
   width: 7.135%;
   height: 46.15%;
   display: flex;
-  gap:5.9%;
+  gap: 5.9%;
   padding-left: 1.5%;
-
 }
-.logo h1{
+
+.logo h1 {
   margin: 0;
 }
-.search{
+
+.search {
   width: 32.8%;
   height: 46.15%;
- margin-left: 16.8%;
- 
- text-align: left;
+  margin-left: 16.8%;
+  text-align: left;
   display: flex;
   position: relative;
+  align-items: center;
 }
-.search input{
-  width:  100%;
+
+.search input {
+  width: 100%;
   height: 100%;
   border-radius: 23px;
   border: none;
   z-index: 1;
   background-color: #f1f1f1;
+  padding-left: 38px;
+  transition: margin-left 0.5s ease;
+ 
 }
-.icon_search{
-    position: absolute;
-  top: 50%;
-  left: 15px;
-  transform: translateY(-50%);
-  width: 21px;
-  height: 21px;
-  opacity: 0.7;
-  z-index: 2;
+.search.active input {
+  margin-left: 15px;
 }
-.placeholder {
-  position: absolute;
-  top: 50%;
-  left: 45px; 
-  transform: translateY(-50%);
-  color: #aaa;
-  z-index: 2; 
-  font-size: 12px;
-}
+
+
+
 .buttons {
   display: flex;
-  
   margin-left: 1.9%;
-
-  
+  text-align: center;
 }
-.buttons img{
+
+.buttons img {
   width: 65%;
   height: 100%;
 }
-.buttons p{
+
+.buttons p {
   font-size: 9px;
 }
-.buttons{
+
+.buttons {
   align-items: center;
-  
   margin-top: 15px;
 }
-.button-item-mail{
+
+.button-item-mail {
   padding-left: 14px;
   padding-right: 10px;
 }
-.button-item-mail img{
- width: 52%;
+
+.button-item-mail img {
+  width: 52%;
 }
-.button-item-bell img{
- width: 45%;
-}.button-item-bell p{
- padding-bottom: 2px;
+
+.button-item-bell img {
+  width: 45%;
 }
-.profile_header{
+
+.button-item-bell p {
+  padding-bottom: 1.5px;
+}
+
+.profile_header {
   display: flex;
   width: 16%;
   margin-left: 3.7%;
 }
-.profile_header .avatar img{
+
+.profile_header .avatar img {
   width: 36px;
   height: 36px;
   padding-top: 10px;
-
 }
-.profile_header .infor{
+
+.profile_header .infor {
   padding-top: 10px;
 }
+.icon_search {
+  position: absolute; /* Position the icon absolutely */
+  top: 50%; /* Center vertically */
+  left: 12px; /* Adjust the left position as needed */
+  transform: translateY(-50%); /* Center vertically */
+  width: 21px;
+  height: 21px;
+  opacity: 0.7;
+  z-index: 2; /* Ensure it appears above the input field */
+}
+
 .profile_header .nameUser {
   font-size: 14.5px;
   font-weight: bold;
   width: 100%;
 }
+
 .profile_header .role {
   text-align: left;
   font-size: 12px;
 }
-.menu_header{
-  padding-left: 4.5%;
 
+.menu_header {
+  padding-left: 4.5%;
+}
+
+.button-item-KH:hover {
+  cursor: pointer;
+}
+
+.button-item-bell:hover {
+  cursor: pointer;
+}
+
+.button-item-mail:hover {
+  cursor: pointer;
+}
+
+.profile_header:hover {
+  cursor: pointer;
+}
+
+.menu_header:hover {
+  cursor: pointer;
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // import '../header/header.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import thư viện FontAwesomeIcon
 import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
@@ -10,33 +10,51 @@ import avatar from "../../pic/Avatars.png";
 import search from "../../pic/Search.png";
 import "./header.css";
 const Header = () => {
+  const [isFocused, setIsFocused] = useState(false);
+
+  const handleFocus = () => {
+    setIsFocused(true);
+  };
+  const handleBlur = () => {
+    setIsFocused(false);
+  };
   return (
     <div className="header">
       <div className="logo">
         <img src={logo} alt="Logo" />
       </div>
-      <div className="search">
-        <img src={search} alt="" className="icon_search" />
-        <div className="placeholder">Tìm kiếm trên Tomiru</div>
-        <input type="text" />
+      <div className={`search ${isFocused ? "active" : ""}`}>
+        {!isFocused && (
+          <>
+            <img src={search} alt="" className="icon_search" />
+           
+          </>
+        )}
+        <input
+          type="text"
+          onFocus={handleFocus}
+          onBlur={handleBlur}
+          placeholder="tìm kiếm"
+          className={`search_input ${isFocused ? "focused" : ""}`}
+        />
       </div>
       <div className="buttons">
         <div className="button-item-KH">
-          <img src={brain}  />
+          <img src={brain} />
           <p>CSKH</p>
         </div>
         <div className="button-item-mail">
-          <img src={mail}  />
+          <img src={mail} />
           <p>Hòm Thư</p>
         </div>
         <div className="button-item-bell">
-          <img src={bell}  />
+          <img src={bell} />
           <p>Thông Báo</p>
         </div>
       </div>
       <div className="profile_header">
         <div className="avatar">
-          <img src={avatar}  />
+          <img src={avatar} />
         </div>
         <div className="infor">
           <div className="nameUser">Nguyễn Văn A</div>

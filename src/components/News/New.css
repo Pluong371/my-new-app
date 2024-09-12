@@ -52,22 +52,39 @@
 /* Post content section */
 .post-content {
   margin-bottom: 8px;
- 
 }
 .post-content .content {
   width: 100%;
   padding: 0;
-   margin-top: 0px;
+  margin-top: 0px;
 }
-/* .post-content iframe {
+.post-content .content_media {
   width: 100%;
-height:fit-content ;
-} */
+  height: 50%;
+}
+.filter {
+  display: flex;
+  justify-content: right;
+  margin-bottom: 12px;
+  gap:4px;
+}
 
-.post-content img {
+.filter span{
+  font-size: 14px;
+  font-weight: 400;
+
+}
+.filter img{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+/* .post-content img {
   border-radius: 8px;
   margin-top: 8px;
-}
+  width: 50%;
+  height: auto;
+} */
 
 /* Actions section */
 .actions {
@@ -125,4 +142,5 @@ height:fit-content ;
 }
 .col:hover {
   background-color: #f1f1f1;
+  cursor: pointer;
 }

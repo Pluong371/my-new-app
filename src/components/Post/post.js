@@ -21,6 +21,11 @@ const PostForm = ({ onPostSubmit }) => {
     const newPost = {
       content: inputValue,
       name: "test",
+      avatar: { faUserAstronaut },
+      likes: 0,
+      comments: 0,
+      shares: 0,
+      media_type: "none",
       timestamp: new Date().toLocaleString()
     };
 
